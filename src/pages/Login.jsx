@@ -26,7 +26,17 @@ function Login() {
     return isValidId;
   }
 
+<<<<<<< HEAD
   function isId() {}
+=======
+  async function handleLogin() {
+    await setLogIn(idPw);
+
+    if (pb.authStore.isValid) {
+      globalThis.location.href = "/";
+    }
+  }
+>>>>>>> e82c38e (fix : revert에 해당하는 커밋 재시도)
 
   return (
     <SignContents>

@@ -48,5 +48,6 @@ const routerConfig = isValidUser
       },
     ];
 
+    
 const router = createBrowserRouter(routerConfig);
 export default router;

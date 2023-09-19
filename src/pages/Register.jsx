@@ -50,6 +50,18 @@ function Register() {
     // email: "ccc@ccc.com"
   };
 
+<<<<<<< HEAD
+=======
+  async function handleRegister() {
+    await create("users", createData);
+    await setLogIn([id, pw]);
+
+    if (pb.authStore.isValid) {
+      globalThis.location.href = "/";
+    }
+  }
+
+>>>>>>> e82c38e (fix : revert에 해당하는 커밋 재시도)
   return (
     <SignContents>
       <SignLogo />
