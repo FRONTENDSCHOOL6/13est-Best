@@ -3,9 +3,12 @@ import FeedItem from "@/components/Feed/FeedItem/FeedItem";
 import Spinner from "@/components/Spinner";
 import { useFeedList, useIntersect } from "@/hooks";
 import { useUserInfo } from "@/hooks/useUserInfo";
+import Footer from "@/layout/Footer";
+import Header from "@/layout/header";
 import { getPbImageURL } from "@/utils";
 import { useState, useEffect } from "react";
 import { IoPersonCircleSharp } from "react-icons/io5";
+import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 function UserReviewList() {
@@ -64,24 +67,30 @@ function UserReviewList() {
 
   return (
     <>
-      <header className="sticky top-0 z-10 border-b bg-white px-2 py-5">
-        <div className="mx-auto flex max-w-3xl items-center justify-between">
-          <dl className="flex items-center gap-1">
-            <dt className="sr-only">작성자 프로필</dt>
-            <dd className="mr-1 h-7 w-7 rounded-full bg-gray-300">
-              {result[0].expand.writer.avatar ? (
-                <img
-                  src={getPbImageURL(result[0].expand.writer, result[0].expand.writer.avatar)}
-                  alt="작성자 프로필"
-                  className="h-full w-full rounded-full object-cover text-xs"
-                />
-              ) : (
-                <IoPersonCircleSharp className="h-full w-full text-gray-100" />
-              )}
-            </dd>
-            <dt className="sr-only">작성자</dt>
-            <dd className="text-xl font-bold">{result[0].expand.writer.nickname}</dd>
-          </dl>
+      <Header />
+      <header className="sticky top-0 z-10 bg-white py-4 shadow-[0_6px_6px_-2px_rgba(0,0,0,0.1)]">
+        <div className="mx-auto flex max-w-3xl items-center justify-between px-2">
+          <Link to={`/userReview/${userId}`}>
+            <dl className="flex items-center gap-1">
+              <dt className="sr-only">작성자 프로필</dt>
+              <dd className="mr-1 h-7 w-7 rounded-full bg-gray-300">
+                {result[0].expand.writer.avatar ? (
+                  <img
+                    src={getPbImageURL(result[0].expand.writer, result[0].expand.writer.avatar)}
+                    alt="작성자 프로필"
+                    className="h-full w-full rounded-full object-cover text-xs"
+                  />
+                ) : (
+                  <IoPersonCircleSharp className="h-full w-full text-gray-100" />
+                )}
+              </dd>
+              <dt className="sr-only">작성자</dt>
+              <dd className="text-xl font-bold">
+                {result[0].expand.writer.nickname}
+                <span className="text-base font-semibold"> 님의 플레이스</span>
+              </dd>
+            </dl>
+          </Link>
           {isFollow ? (
             <button className="h-8 rounded-md bg-gray-100 px-3 text-sm text-gray-500" onClick={handleFollow}>
               팔로우 취소
@@ -98,12 +107,13 @@ function UserReviewList() {
         <ul className="flex flex-col gap-1 bg-gray-50">
           {result.map((item) => (
             <li key={item.id}>
-              <FeedItem item={item} hiddenHeader={true} />
+              <FeedItem item={item} hiddenHeader={true} isPlace={true} />
             </li>
           ))}
         </ul>
         <div ref={ref} className="h-[1px]"></div>
       </main>
+      <Footer />
     </>
   );
 }

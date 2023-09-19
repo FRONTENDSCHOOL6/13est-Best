@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router-dom";
 import { useFeedList, useIntersect } from "@/hooks";
 import Spinner from "@/components/Spinner";
 import { getPbImageURL } from "@/utils";
+import Profile from "@/components/Profile";
 
 function UserReview() {
   const { userId } = useParams();
@@ -33,7 +34,8 @@ function UserReview() {
   return (
     <div className="relative min-h-screen pb-28">
       <Header />
-      <div className="bg-primary pb-4"></div>
+      <div className="pb-4"></div>
+      <Profile />
       <main className="mx-auto max-w-3xl p-3">
         <h2 className="sr-only">유저 리뷰 페이지</h2>
         <ul className="my-4 grid grid-cols-3 gap-1.5">

@@ -1,4 +1,3 @@
-import Profile from "@/components/Profile";
 import { TiThMenu } from "react-icons/ti";
 import { Link } from "react-router-dom";
 
@@ -19,7 +18,6 @@ function Header() {
           <TiThMenu className="text-2xl text-secondary" />
         </button>
       </div>
-      <Profile />
     </header>
   );
 }
