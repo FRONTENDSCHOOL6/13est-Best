@@ -3,14 +3,20 @@
 
 ## 🌎 Proejct : Best Place
 
-  <div align="center"><img src="./public/readme/BestPlace.png" width="30%"></div>
+  <div align="center"><img src="./readme/BestPlace.png" width="30%"></div>
 
 
+
+
+## 📚 Information
 
 📅 개발 기간 | 2023. 09. 04 ~ 2023. 09. 24
 
 📌 프로젝트 주제 | 맛집 예약/리뷰 서비스 - [네이버MY플레이스](https://m.place.naver.com/my/home) 클론 코딩
 
+[📑발표자료]([https://](https://www.miricanvas.com/v/12flll1))
+
+[🔗배포주소](https://13est-place.netlify.app/)
 
 
 ## 🤗 Team
@@ -81,14 +87,9 @@ Page | Preview | Description
 
 
 ## ⏲ Performance inspection
+<div align="center"><img src="./readme/performance.PNG" width="500" height="400"></div>
 
 
-## 📚 Information
-
-
-[📑발표자료](https://)
-
-[🔗배포주소](https://)
 
 
 
