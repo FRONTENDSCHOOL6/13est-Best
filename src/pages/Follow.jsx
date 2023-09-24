@@ -1,7 +1,7 @@
 import { pb, update } from "@/api/pocketbase";
 import ScrollToTop from "@/components/ScrollTop";
 import { useFetchList } from "@/hooks/useFetchList";
-import Header from "@/layout/header";
+import Header from "@/layout/Header";
 import { getPbImageURL } from "@/utils";
 import { array, func, object, string } from "prop-types";
 import { useEffect } from "react";
