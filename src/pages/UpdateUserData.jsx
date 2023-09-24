@@ -13,7 +13,7 @@ import Profile from "./../components/Profile";
 import ReviewPhoto from "@/components/Review/ReviewPhoto";
 import { isRegValid, alertReg, alertMessage } from "@u/index";
 import { getPbImageURL } from "./../utils/getPbImageURL";
-import Header from './../layout/header';
+import Header from '@l//header';
 
 function Register() {
   const navigate = useNavigate();
