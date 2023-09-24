@@ -1,6 +1,6 @@
 import { pb } from "@/api/pocketbase";
 import { useNavigate } from "react-router-dom";
-import Header from "@l/header";
+import Header from "@l/Header";
 import { alertMessage, isEmailRegValid, isTelRegValid } from "@u/index";
 import ReservationGuestCount from "@c/Reservation/ReservationGuestCount";
 import ReservationGuestInfo from "@c/Reservation/ReservationGuestInfo";

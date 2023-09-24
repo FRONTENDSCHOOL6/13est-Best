@@ -8,7 +8,7 @@ import WriteText from "@c/WriteText";
 import Button from "@c/Button";
 import { alertMessage } from "@u/index";
 import useReview from "@h/useReview";
-import Header from "@l/header";
+import Header from "@l/Header";
 import { useState } from "react";
 import PopUpModal from "@/components/PopUpModal";
 
