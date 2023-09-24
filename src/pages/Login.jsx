@@ -56,7 +56,7 @@ function Login() {
     
     // Don't forget to cleanup after component unmounts
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, []);
+  });
   
   return (
     <SignContents>

@@ -1,6 +1,6 @@
 import { pb } from "@/api/pocketbase";
 import NoResult from "@/components/Feed/NoResult";
-import PopUpModal from "@/components/PopupModal";
+import PopUpModal from "@/components/PopUpModal";
 import ScrollToTop from "@/components/ScrollTop";
 import Kakaomap from "@/components/kakaomap";
 import { useUserInfo } from "@/hooks/useUserInfo";

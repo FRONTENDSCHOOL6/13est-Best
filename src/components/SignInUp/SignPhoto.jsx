@@ -2,6 +2,7 @@ import { string, func } from "prop-types";
 import { useState } from "react";
 import { pb, read } from "@/api/pocketbase";
 import { getPbImageURL } from "./../../utils/getPbImageURL";
+import { useRef } from "react";
 function SignInput({
   labelValue,
   ariaText,
@@ -24,7 +25,7 @@ function SignInput({
     setFileUrl(url);
     inputValue(selectedFile);
   };
-  const inputFileRef = useState(); // Create a ref
+  const inputFileRef = useRef(); // Create a ref
 
   const handleClickImage = () => {
     inputFileRef.current.click(); // Simulate click on input when image is clicked
@@ -38,7 +39,7 @@ function SignInput({
 
       <div className="flex flex-col items-center">
         <img
-          className="mx-5 mt-3 h-20 w-20 rounded-full border-4  border-primary"
+          className="mx-5 mt-3 h-32 w-32 rounded-full border-4  border-primary"
           src={fileUrl}
           onClick={handleClickImage}
         />
