@@ -8,7 +8,7 @@
 
 
 
-## 📚 Information
+## 📢 Information
 
 📅 개발 기간 | 2023. 09. 04 ~ 2023. 09. 24
 
@@ -86,11 +86,19 @@ Page | Preview | Description
 에러페이지 | <img src="./readme/notFound.PNG" width="175" height="310"> | 이전페이지로 이동
 
 
+## 📚 DB Collection(Pocket Host)
+
+name | fields
+----- | -----
+users | username, email, nickname, avatar, review, regions, favorites
+follow | owner, followings, followers
+places | title,  category, address, photos
+reservation | booker, place, date, reservedName, guestCount, tel, requirements, visited, canceled
+reviews | writer, place, reservation, contents, photos, keywords
+
+
 ## ⏲ Performance inspection
 <div align="center"><img src="./readme/performance.PNG" width="500" height="400"></div>
-
-
-
 
 
 ## 💬 How to use?
